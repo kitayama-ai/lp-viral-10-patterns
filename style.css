@@ -581,16 +581,64 @@ p {
     border-color: rgba(255, 255, 255, 0.15);
 }
 
+/* === Footer / Final CTA === */
+.cta-inner {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 3.5rem;
+    line-height: 1.4;
+    margin-bottom: 32px;
+}
+
+.gradient-text.big {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 16px;
+    display: block;
+    background: linear-gradient(135deg, #fff 0%, #3b82f6 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.4));
+}
+
+.cta-desc {
+    font-size: 1.2rem;
+    margin-bottom: 48px;
+    color: #e2e8f0;
+}
+
 .faq-item .question {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 16px;
+    line-height: 1.5;
 }
 
+/* FAQ Answer Spacing */
 .faq-item .answer {
     color: var(--text-muted);
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 2.0;
+    /* Increased for readability */
+    padding-top: 8px;
+    position: relative;
+    padding-left: 28px;
+    /* Indent A. */
+}
+
+.faq-item .answer::before {
+    content: 'A.';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-weight: 700;
+    color: var(--accent-blue);
 }
 
 /* === Footer === */
