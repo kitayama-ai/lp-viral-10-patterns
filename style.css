@@ -148,6 +148,16 @@ p {
     font-size: 1.05rem;
 }
 
+/* Gold Gradient for Premium Feel */
+.text-gold {
+    background: linear-gradient(135deg, #ffd700 0%, #fdb931 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(253, 185, 49, 0.4));
+    display: inline-block;
+}
+
 .gradient-text {
     background: var(--gradient-aurora);
     -webkit-background-clip: text;
@@ -242,22 +252,25 @@ p {
 }
 
 .eyebrow-box {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    padding: 10px 30px;
-    border-radius: 99px;
-    margin-bottom: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    display: inline-block;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Removed box styling for cleaner look as requested */
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 .eyebrow {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.1em;
+    font-size: 1rem;
+    font-weight: 700;
+    /* Using Gold for impact even without box */
+    color: #fdb931;
+    letter-spacing: 0.05em;
     margin: 0;
+    white-space: nowrap;
+    /* Force one line */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* Polished Title */
@@ -761,14 +774,24 @@ img {
     }
 
     .hero-desc {
-        margin-top: 60vh;
-        /* Push below the person in image? mobile image might be different aspect ratio. 
-                           Actually, background-size: cover centers it. We need to be careful. 
-                           Let's assume the person is center-ish. 
-                           We might need a mobile-specific background or positioning. */
-        margin-top: 40px;
-        background: rgba(5, 5, 16, 0.85);
+        /* Pushing description way down to clear the face area */
+        /* The face is likely in the center-top area. 
+           We keep the title at the top, and push the description to the bottom. */
+        margin-top: 55vh;
+        background: rgba(5, 5, 16, 0.9);
         /* More opaque on mobile for readability */
+        padding: 24px;
+        position: relative;
+        z-index: 10;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-title-wrapper {
+        /* Ensure title stays at top, not covering eyes if possible, or verify position */
+        /* If we push margin-top on desc, the flow is: Title -> Spacer -> Description */
+        /* We might need to ensure Title doesn't drift down */
+        margin-top: -20px;
+        /* Pull title up slightly on mobile */
     }
 
     /* Adjust grid for mobile */
