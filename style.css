@@ -124,13 +124,14 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.15em;
-    color: var(--accent-blue);
+    color: #fdb931;
+    /* Gold */
     margin-bottom: 24px;
     text-transform: uppercase;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(253, 185, 49, 0.1);
     padding: 6px 16px;
     border-radius: 99px;
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(253, 185, 49, 0.2);
 }
 
 /* === Typography === */
@@ -149,11 +150,13 @@ p {
 }
 
 /* Gold Gradient for Premium Feel */
-.text-gold {
-    background: linear-gradient(135deg, #ffd700 0%, #fdb931 50%, #d4af37 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Gold Gradient for Premium Feel - High Specificity */
+.text-gold,
+.hero-title-accent.text-gold {
+    background: linear-gradient(135deg, #ffd700 0%, #fdb931 50%, #d4af37 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     filter: drop-shadow(0 0 20px rgba(253, 185, 49, 0.4));
     display: inline-block;
 }
@@ -461,11 +464,14 @@ p {
 }
 
 .highlight {
-    background: linear-gradient(120deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 100%);
+    background: linear-gradient(120deg, rgba(253, 185, 49, 0.3) 0%, rgba(253, 185, 49, 0) 100%);
     padding: 0 8px;
     border-radius: 4px;
-    color: #60a5fa;
+    color: #fdb931;
+    /* Gold Text */
+    text-shadow: 0 0 10px rgba(253, 185, 49, 0.3);
     text-decoration: none;
+    font-weight: 700;
 }
 
 /* === Solution === */
