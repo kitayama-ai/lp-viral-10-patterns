@@ -312,10 +312,38 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.08);
     /* Finer border */
     max-width: 720px;
-    margin: 240px auto 48px;
+    margin: 300px auto 48px;
+    /* INCREASED TOP MARGIN TO PUSH TEXT DOWN BELOW FACE */
     /* Spacing */
     line-height: 1.9;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* === Solution (Recipe Image) === */
+.recipe-image-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    /* Subtle border matching Enterprise theme */
+    transition: transform 0.3s ease;
+}
+
+.recipe-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(59, 130, 246, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+/* Hide old formula grid if present */
+.formula-grid {
+    display: none !important;
 }
 
 /* Refined Button */
